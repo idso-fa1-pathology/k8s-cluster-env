@@ -16,7 +16,7 @@ $ docker build --platform linux/x86_64 -t pytorchenv:pchen6 .  # on Mac
 ```
 ### Step 3. Push docker image to HPC-Harbor
 * Create a public project named same as your user account on HPC-Harbor first
-* Then on your computation, login, tag, and then push
+* Then on your computer, login, tag, and then push to HPC-Harbor
 ```
 $ docker login hpcharbor.mdanderson.edu                                           # login to the Harbor
 $ docker tag pytorchenv:pchen6 hpcharbor.mdanderson.edu/pchen6/pytorchenv:pchen6  # tag as hpcharbor version
