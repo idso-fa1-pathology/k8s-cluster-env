@@ -1,2 +1,2 @@
 # K8S-Cluster-Env
-Dockerfile templates and guidance for configuring deep learning running environment using kubernetes (K8S) cluster
+Dockerfile templates for configuring deep learning running environments using kubernetes (K8S) cluster
