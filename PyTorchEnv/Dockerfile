@@ -19,7 +19,7 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux
     rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
 ENV PATH=/App/miniconda/bin:$PATH
 
-## create a Python 3.10 environment
+## create a conda python 3.10 environment
 RUN /App/miniconda/bin/conda install conda-build \
  && /App/miniconda/bin/conda create -y --name py310 python=3.10.13 \
  && /App/miniconda/bin/conda clean -ya
@@ -47,5 +47,6 @@ RUN chmod -R 777 /.local
 WORKDIR /.cache
 RUN chmod -R 777 /.cache
 
+# bash at /App
 WORKDIR /App
 CMD ["/bin/bash"]
