@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # install Miniconda
 WORKDIR /App
 RUN chmod 777 /App
-RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh \ 
-    bash Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -p /App/miniconda -b \
-    rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
+RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
+RUN bash Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -p /App/miniconda -b 
+RUN rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
 ENV PATH=/App/miniconda/bin:$PATH
 
 ## create a conda python 3.10 environment
