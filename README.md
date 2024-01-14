@@ -1,5 +1,5 @@
 # K8S-Cluster-Env
-Dockerfile templates for configuring deep learning running environments using kubernetes (K8S) cluster
+Dockerfile templates configuring deep learning running environments for kubernetes (K8S) cluster usage
 
 ## Following illustration based on the user account *pchen6* with *PyTorchEnv*
 ### Step 1: Prepare Dockerfile
