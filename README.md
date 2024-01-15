@@ -18,9 +18,9 @@ $ docker build --platform linux/x86_64 -t dlenv:pchen6 .  # on Mac
 * First create a public project (named the same as your user account) on [HPC-Harbor](https://hpcharbor.mdanderson.edu)
 * Then on your local machine, tag docker image, login to HPC-Harbor, and then push docker image 
 ```
-$ docker tag dlenv:pchen6 hpcharbor.mdanderson.edu/pchen6/pydlenvtorchenv:pchen6  # tag docker image as HPC-Harbor version
-$ docker login hpcharbor.mdanderson.edu                                           # login HPC-Harbor
-$ docker push hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6                        # push image to HPC-Harbor
+$ docker tag dlenv:pchen6 hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6  # tag docker image as HPC-Harbor version
+$ docker login hpcharbor.mdanderson.edu                                 # login HPC-Harbor
+$ docker push hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6              # push image to HPC-Harbor
 ```
 ## Step 4. Start K8S Jupyter for interactive DL model development
 * Visit http://hpcexhaproxy.mdanderson.edu/jupyter
