@@ -14,10 +14,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # install Miniconda
 WORKDIR /App
 RUN chmod 777 /App
-RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
-RUN bash Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -p /App/miniconda -b 
-RUN rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
-ENV PATH=/App/miniconda/bin:$PATH
+# RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
+# RUN bash Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -p /App/miniconda -b 
+# RUN rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
+# ENV PATH=/App/miniconda/bin:$PATH
 
 # install python packages
 RUN pip install gpustat==0.6.0 setuptools==61.2.0 pytz==2021.1 joblib==1.2.0 tqdm==4.64.0 docopt==0.6.2
@@ -27,7 +27,8 @@ RUN pip install pandas==2.1.2 matplotlib==3.7.2 seaborn==0.13.0 pycm==3.5 deepdi
 RUN pip install opencv-python==4.8.0.74 scikit-image==0.22.0 imgaug==0.4.0 mahotas==1.4.12 
 RUN pip install scikit-learn==1.3.2 xgboost==2.0.3 statsmodels==0.13.5 lifelines==0.27.8 
 RUN pip install tensorflow-hub==0.13.0 tensorflow-datasets==4.9.2 tensorboard==2.14.0
-RUN pip install tensorflow==2.14.0
+RUN pip install tensorflow==2.15.0
+
 
 # configure folder permission
 WORKDIR /tensorflow_datasets
