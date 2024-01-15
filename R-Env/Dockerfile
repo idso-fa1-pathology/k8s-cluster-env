@@ -8,8 +8,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libpq-dev gdal-bin libgdal-dev
 
 # install packages
-RUN R -e "install.packages(c('BiocManager', 'XML', 'proj4'))"
+RUN R -e "install.packages('BiocManager', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "BiocManager::install(c('devtools', 'tidyverse'))"
+RUN R -e "install.packages('stringr', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('shiny', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('tidymodels', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 # /Data folder preparation
 WORKDIR /Data
