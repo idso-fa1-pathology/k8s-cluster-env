@@ -1,5 +1,5 @@
 # K8S-Cluster-Env
-Dockerfile templates configuring running environment for kubernetes (K8S) cluster usage
+Dockerfile templates configuring running environment for usage of kubernetes (K8S) cluster 
 
 ## Following illustration based on the user account *pchen6* with *DL-Env*
 ### Step 1: Prepare Dockerfile
