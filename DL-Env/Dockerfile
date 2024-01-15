@@ -34,11 +34,9 @@ RUN chmod -R 777 /.local
 WORKDIR /.cache
 RUN chmod -R 777 /.cache
 
-# folder preparation
+# /Data folder preparation
 WORKDIR /Data
-RUN chmod 777 /Data
-WORKDIR /App
-RUN chmod 777 /App
+RUN chmod -R 777 /Data
 
 # bash at /App
 WORKDIR /App
