@@ -11,14 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   sudo curl wget htop git vim ca-certificates python3.10 python3-pip  \
   && rm -rf /var/lib/apt/lists/*
 
-# install Miniconda
-WORKDIR /App
-RUN chmod 777 /App
-# RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
-# RUN bash Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -p /App/miniconda -b 
-# RUN rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
-# ENV PATH=/App/miniconda/bin:$PATH
-
 # install python packages
 RUN pip install gpustat==0.6.0 setuptools==61.2.0 pytz==2021.1 joblib==1.2.0 tqdm==4.64.0 docopt==0.6.2
 RUN pip install ipython==8.10.0 jupyterlab==3.6.1 notebook==6.4.11 traitlets==5.9.0 chardet==5.0.0 nbconvert==7.8.0
@@ -39,6 +31,10 @@ WORKDIR /.local
 RUN chmod -R 777 /.local
 WORKDIR /.cache
 RUN chmod -R 777 /.cache
+
+# /Data folder preparation
+WORKDIR /Data
+RUN chmod -R 777 /Data
 
 # bash at /App
 WORKDIR /App
