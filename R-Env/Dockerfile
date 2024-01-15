@@ -17,7 +17,6 @@ RUN chmod 777 /App
 RUN R -e "install.packages(c('BiocManager', 'XML', 'proj4'))"
 RUN R -e "BiocManager::install(c('devtools', 'tidyverse'))"
 
-
 # bash at /App
 WORKDIR /App
 CMD ["/bin/bash"]
