@@ -1,7 +1,7 @@
 # K8S-Cluster-Env
 Dockerfile templates configuring running environment for usage of kubernetes (K8S) cluster 
 
-## Following illustration based on user *pchen6* with *DL-Env*, replace *pchen6* to your own user name for experimentation 
+## Following instructions are based on user name *pchen6* with *DL-Env*, please replace *pchen6* to your own user name for experimentation 
 ### Step 1: Prepare Dockerfile
 * Access Dockfile within the DL-Env folder (best to adapt it for your purpose)
 ```
