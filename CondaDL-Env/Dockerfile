@@ -38,8 +38,8 @@ RUN pip install tensorflow==2.15.0
 RUN pip install tensorflow-hub==0.13.0 tensorflow-datasets==4.9.2 tensorboard==2.14.0 tensorrt==8.6.1.post1
 RUN conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
 RUN pip install pyg-nightly==2.4.0.dev20231209 networkx==3.2 pysal==23.7 spatialentropy==0.0.4 
-RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230
-RUN pip install stardist==0.8.5 histocartography==0.2.1 tiatoolbox==1.5.0
+RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230 stardist==0.8.5 
+RUN pip install tiatoolbox==1.5.0
 
 # configure folder permission
 WORKDIR /.dgl
