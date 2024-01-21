@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu20.04
 
 # set environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -34,11 +34,12 @@ RUN pip install openslide-python==1.3.1 Pillow==10.0.0
 RUN pip install pandas==2.1.2 matplotlib==3.7.2 seaborn==0.13.0 pycm==3.5 deepdish==0.3.7 
 RUN pip install opencv-python==4.8.0.74 scikit-image==0.22.0 imgaug==0.4.0 mahotas==1.4.12 
 RUN pip install scikit-learn==1.3.2 xgboost==2.0.3 statsmodels==0.13.5 lifelines==0.27.8 
-RUN pip install tensorflow==2.15.0 
+RUN pip install tensorflow==2.13.1 
 RUN pip install tensorflow-hub==0.13.0 tensorflow-datasets==4.9.2 tensorboard==2.14.0 tensorrt==8.6.1.post1
 RUN conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
 RUN pip install pyg-nightly==2.4.0.dev20231209 networkx==3.2 pysal==23.7 spatialentropy==0.0.4 
-RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230 stardist==0.8.5 
+RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230 
+RUN pip stardist==0.8.5 csbdeep==0.7.4
 RUN pip install tiatoolbox==1.5.0
 
 # configure folder permission
