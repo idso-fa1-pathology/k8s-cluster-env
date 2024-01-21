@@ -28,7 +28,7 @@ ENV CONDA_PREFIX=/App/miniconda/envs/$CONDA_DEFAULT_ENV
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 
 # install python packages
-RUN pip install gpustat==0.6.0 setuptools==61.2.0 pytz==2021.1 joblib==1.2.0 tqdm==4.64.0 docopt==0.6.2
+RUN pip install gpustat==0.6.0 setuptools==61.2.0 pytz==2023.3 joblib==1.2.0 tqdm==4.66.1 docopt==0.6.2
 RUN pip install ipython==8.10.0 jupyterlab==3.6.1 notebook==6.4.11 traitlets==5.9.0 chardet==5.0.0 nbconvert==7.8.0
 RUN pip install openslide-python==1.3.1 Pillow==10.0.0 
 RUN pip install pandas==2.1.2 matplotlib==3.7.2 seaborn==0.13.0 pycm==3.5 deepdish==0.3.7 
@@ -39,7 +39,7 @@ RUN pip install tensorflow-hub==0.13.0 tensorflow-datasets==4.9.2 tensorboard==2
 RUN conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
 RUN pip install pyg-nightly==2.4.0.dev20231209 networkx==3.2 pysal==23.7 spatialentropy==0.0.4 
 RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230
-RUN pip install tqdm==4.66.1
+RUN pip install stardist==0.8.5 histocartography==0.2.1 tiatoolbox==1.5.0
 
 # configure folder permission
 WORKDIR /.dgl
