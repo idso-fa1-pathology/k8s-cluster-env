@@ -1,21 +1,21 @@
 <h1 align="center">
   <a href="https://reactnative.dev/">
-    K8S Cluster Environment Configuration
+    K8S Cluster Running Environment Configuration
   </a>
 </h1>
 
-- Dockerfile templates configuring running environment for usage of kubernetes (K8S) cluster 
-- Following instructions are based on user name *pchen6* with *DL-Env*, please replace *pchen6* to your own user name for experimentation 
+- Dockerfile boilerplates for configuring kubernetes (K8S) cluster running environment
+- Following instructions are based on the user name **pchen6** with the boilerplate **DL-Env**, please replace all **pchen6** to your own user name for experimentation 
 
 ## Configuration Procedures
 ### Step 1: Prepare Dockerfile
-* Access Dockfile within the DL-Env folder (best to adapt it for your purpose)
+* Access Dockerfile within the DL-Env folder (best to adapt it for your purpose)
 ```
 $ git clone https://github.com/idso-fa1-pathology/k8s-cluster-env.git
 $ cd k8s-cluster-env/DL-Env
 ```
 ### Step 2. Build Docker Image
-* Build docker image from Dockerfile (choose one from two options below based on your local machine), the building process can take long (5-30 mins)
+* Build docker image from Dockerfile (choose one from two options below based on your machine), the first-time building process can take long (5-30 mins)
 ```
 $ docker build -t dlenv:pchen6 .                          # on Linux
 $ docker build --platform linux/x86_64 -t dlenv:pchen6 .  # on Mac
@@ -30,9 +30,9 @@ $ docker push hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6              # push i
 ```
 ## Step 4. Launch K8S Instance for DL Model Development
 * Visit http://hpcexhaproxy.mdanderson.edu/jupyter
-* Toggle on "Custom Environment", and set configurations
+* Scroll to the bottom, and toggle on "Custom Environment", and set configurations
     - _CPUs_: default **32**, range from 1 to 256
     - _Cuda Version_: default **11**, options are: 11 (NVIDIA A100) and 12 (NVIDIA H100)
     - _GPUs_: default **1**, range from 1 to 4
     - _Image_: no default, the format is **hpcharbor.mdanderson.edu/<project_name>/<image_name>:<image_tag>** (e.g., hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6)
-* Click the yellow "Start" at the bottom, and wait 1-2 minutes for environment initiation, retry if encountering Timeout 
+* Click the yellow "Start", and wait 1-2 minutes for environment initiation, retry if encountering Timeout 
