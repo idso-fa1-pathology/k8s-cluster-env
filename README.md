@@ -1,11 +1,13 @@
 <h1 align="center">
-  <a href="https://reactnative.dev/">
-    K8S Cluster Running Environment Configuration
-  </a>
+  K8S Cluster Running Environment Configuration
 </h1>
 
-- Dockerfile boilerplates for configuring kubernetes (K8S) cluster running environment
-- Following instructions are based on the user name **pchen6** with the boilerplate **DL-Env**, please replace all **pchen6** to your own user name for experimentation 
+<h3 align="left">
+  &mdash; Dockerfile boilerplates for configuring kubernetes (K8S) cluster running environment <br>
+  &mdash; Following instructions are based on the user name <strong><i>pchen6</i></strong> with the boilerplate <strong><i>DL-Env</i></strong>, please replace all <strong><i>pchen6</i></strong> to your own user name for experimentation 
+</h3>
+
+
 
 ## Configuration Procedures
 ### Step 1: Prepare Dockerfile
