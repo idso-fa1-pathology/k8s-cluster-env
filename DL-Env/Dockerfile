@@ -8,7 +8,7 @@ ENV NUMBA_CACHE_DIR /tmp
 # install libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential libgl1-mesa-glx libglib2.0-0 libgeos-dev libvips-tools \
-  sudo curl wget htop git vim ca-certificates python3.10 python3-pip  \
+  sudo curl wget htop git vim ca-certificates python3-openslide  \
   && rm -rf /var/lib/apt/lists/*
 
 # install python packages
