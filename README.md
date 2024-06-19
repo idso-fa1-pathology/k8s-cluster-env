@@ -34,7 +34,7 @@ $ docker push hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6              # push i
 * Visit http://hpcexhaproxy.mdanderson.edu/jupyter
 * Scroll to the bottom, and toggle on "Custom Environment", and set configurations
     - _CPUs_: default **32**, range from 1 to 256
-    - _DGX Type_: default **A100**, options are: A100 and 12 H100
+    - _DGX Type_: default **A100**, options are: A100 and H100
     - _GPUs_: default **1**, range from 1 to 4
     - _Image_: no default, the format is **hpcharbor.mdanderson.edu/<project_name>/<image_name>:<image_tag>** (e.g., hpcharbor.mdanderson.edu/pchen6/dlenv:pchen6)
 * Click the yellow "Start", and wait 1-2 minutes for environment initiation, retry if encountering Timeout 
