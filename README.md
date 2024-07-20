@@ -4,14 +4,14 @@
 
 <h3 align="left">
   &mdash; Dockerfile boilerplates for configuring kubernetes (K8S) cluster running environment <br>
-  &mdash; Following instructions are based on the user name <strong><i>pchen6</i></strong> with the boilerplate <strong><i>DL-Env</i></strong>, please replace all <strong><i>pchen6</i></strong> to your own user name for experimentation 
+  &mdash; Following instructions are based on the user name <strong><i>pchen6</i></strong> with the boilerplate <strong><i>PIP-DL-Env</i></strong>, please replace all <strong><i>pchen6</i></strong> to your own user name for experimentation 
 </h3>
 
 
 
 ## Configuration Procedures
 ### Step 1: Prepare Dockerfile
-* Access Dockerfile within the DL-Env folder (best to adapt it for your purpose)
+* Access Dockerfile within the PIP-DL-Env folder (best to further adapt it for your purpose)
 ```
 $ git clone https://github.com/idso-fa1-pathology/k8s-cluster-env.git
 $ cd k8s-cluster-env/DL-Env
