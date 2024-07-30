@@ -25,6 +25,7 @@ RUN pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 torchinfo==1.
 RUN pip install cucim-cu12==24.2.0 cupy-cuda12x==12.0.0 
 RUN pip install tensorflow==2.13.0 
 RUN pip install tensorflow-hub==0.16.1 tensorflow-datasets==4.9.4 tensorboard==2.16.2
+RUN pip install scanpy==1.10.2 geopandas==1.0.1 anndata==0.10.8
 
 # configure folder permission
 WORKDIR /.local
