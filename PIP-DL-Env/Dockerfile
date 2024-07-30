@@ -34,4 +34,4 @@ RUN chmod -R 777 /.cache
 # set working directory 
 WORKDIR /App
 CMD ["/bin/bash"]
-# CMD["/bin/python3", "run_script.py"]
+# CMD["/usr/bin/python3", "run_script.py"]
