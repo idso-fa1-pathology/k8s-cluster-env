@@ -26,13 +26,18 @@ RUN pip install cucim-cu12==24.2.0 cupy-cuda12x==12.0.0
 RUN pip install tensorflow==2.13.0 
 RUN pip install tensorflow-hub==0.16.1 tensorflow-datasets==4.9.4 tensorboard==2.16.2
 RUN pip install scanpy==1.10.2 geopandas==1.0.1 anndata==0.10.8
+RUN pip install pyg-nightly==2.4.0.dev20231209 networkx==3.2 pysal==23.7 spatialentropy==0.0.4 
+RUN pip install transformers==4.36.2 pathologyfoundation==0.1.14 ultralytics==8.0.230 accelerate==0.33
 
 # configure folder permission
+WORKDIR /.dgl
+RUN chmod -R 777 /.dgl
 WORKDIR /.local
 RUN chmod -R 777 /.local
 WORKDIR /.cache
 RUN chmod -R 777 /.cache
+
 # set working directory 
 WORKDIR /App
 CMD ["/bin/bash"]
-# CMD["/usr/bin/python3", "run_script.py"]
+# CMD["/usr/bin/python3", "python_script.py"]
